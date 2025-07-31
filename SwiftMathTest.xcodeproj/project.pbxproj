@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DE627AB92E3BCA3400421C85 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = DE627AB82E3BCA3400421C85 /* SwiftMath */; };
+		DE627ABF2E3BCB2600421C85 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = DE627ABE2E3BCB2600421C85 /* SwiftMath */; };
+		DE627AC22E3BCBE500421C85 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = DE627AC12E3BCBE500421C85 /* SwiftMath */; };
+		DE627AC82E3BEFD100421C85 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = DE627AC72E3BEFD100421C85 /* SwiftMath */; };
+		DE627ACE2E3BF2AF00421C85 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = DE627ACD2E3BF2AF00421C85 /* SwiftMath */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DE393CAF2E378667003749BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE627AC82E3BEFD100421C85 /* SwiftMath in Frameworks */,
+				DE627ABF2E3BCB2600421C85 /* SwiftMath in Frameworks */,
+				DE627ACE2E3BF2AF00421C85 /* SwiftMath in Frameworks */,
+				DE627AB92E3BCA3400421C85 /* SwiftMath in Frameworks */,
+				DE627AC22E3BCBE500421C85 /* SwiftMath in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +125,11 @@
 			);
 			name = SwiftMathTest;
 			packageProductDependencies = (
+				DE627AB82E3BCA3400421C85 /* SwiftMath */,
+				DE627ABE2E3BCB2600421C85 /* SwiftMath */,
+				DE627AC12E3BCBE500421C85 /* SwiftMath */,
+				DE627AC72E3BEFD100421C85 /* SwiftMath */,
+				DE627ACD2E3BF2AF00421C85 /* SwiftMath */,
 			);
 			productName = SwiftMathTest;
 			productReference = DE393C9E2E378666003749BF /* SwiftMathTest.app */;
@@ -195,6 +213,9 @@
 			);
 			mainGroup = DE393C952E378666003749BF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DE627ACC2E3BF2AF00421C85 /* XCRemoteSwiftPackageReference "SwiftMath" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DE393C9F2E378666003749BF /* Products */;
 			projectDirPath = "";
@@ -558,6 +579,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE627ACC2E3BF2AF00421C85 /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wingsiu/SwiftMath";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE627AB82E3BCA3400421C85 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		DE627ABE2E3BCB2600421C85 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		DE627AC12E3BCBE500421C85 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		DE627AC72E3BEFD100421C85 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftMath;
+		};
+		DE627ACD2E3BF2AF00421C85 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE627ACC2E3BF2AF00421C85 /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE393C962E378666003749BF /* Project object */;
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SwiftMathTestApp: App {
+struct SwiftMathTestingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

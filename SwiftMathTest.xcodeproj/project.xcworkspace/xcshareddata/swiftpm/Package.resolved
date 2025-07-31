@@ -1,0 +1,15 @@
+{
+  "originHash" : "7b059d2fd92db107ec3016fc1814dc44abb69f0373170edb69b72c0afbaba9cf",
+  "pins" : [
+    {
+      "identity" : "swiftmath",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/wingsiu/SwiftMath",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1e49ab4e85eeb0986d0a63d1ca68f8a4b0b964d5"
+      }
+    }
+  ],
+  "version" : 3
+}
