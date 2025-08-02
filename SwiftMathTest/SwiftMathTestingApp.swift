@@ -6,12 +6,36 @@
 //
 
 import SwiftUI
+import SwiftMath
 
 @main
 struct SwiftMathTestingApp: App {
+    
+    // Add initialization for SwiftMath performance optimization
+    init() {
+        // Preload fonts and warmup rendering engine
+        MTFontManager.initializeFontSystem()
+        // Optionally: Pre-warm rendering engine for math labels
+        SwiftMathTestApp.preWarmRenderingEngine()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+    }
+}
+
+// MARK: - Performance warmup for SwiftMath
+extension SwiftMathTestApp {
+    /// Pre-warm the rendering engine by rendering simple equations at startup
+    static func preWarmRenderingEngine() {
+        let warmupEquations = ["a", "b", "c", "x", "y", "x^2+3", "\\sum_{n=1}^{10} n"]
+        for equation in warmupEquations {
+            let mathLabel = MTMathUILabel()
+            mathLabel.latex = equation
+            mathLabel.sizeToFit()
+        }
+        print("SwiftMathTest: Rendering engine pre-warmed")
     }
 }
