@@ -82,8 +82,8 @@ struct SimpleTestView: View {
         
         // Test 2: Set simple equation
         mathLabel1.latex = "x + y = z"
-        if mathLabel1.latex != nil {
-            testResults.append("✓ Simple equation set: \(mathLabel1.latex ?? "nil")")
+        if mathLabel1.latex != "" {
+            testResults.append("✓ Simple equation set: \(mathLabel1.latex)")
         } else {
             testResults.append("✗ Failed to set simple equation")
         }
@@ -91,8 +91,8 @@ struct SimpleTestView: View {
         // Test 3: Set complex equation
         let mathLabel2 = MTMathUILabel()
         mathLabel2.latex = "\\frac{a}{b}"
-        if mathLabel2.latex != nil {
-            testResults.append("✓ Fraction equation set: \(mathLabel2.latex ?? "nil")")
+        if mathLabel2.latex != ""{
+            testResults.append("✓ Fraction equation set: \(mathLabel2.latex)")
         } else {
             testResults.append("✗ Failed to set fraction equation")
         }

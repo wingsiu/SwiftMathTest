@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "091E4490-739F-429E-B924-A1E8CFD574F4",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:SwiftMathTest.xcodeproj",
+      "identifier" : "DE393C9D2E378666003749BF",
+      "name" : "SwiftMathTest"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SwiftMathTest.xcodeproj",
+        "identifier" : "DE393CAD2E378667003749BF",
+        "name" : "SwiftMathTestTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SwiftMathTest.xcodeproj",
+        "identifier" : "DE393CB72E378667003749BF",
+        "name" : "SwiftMathTestUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

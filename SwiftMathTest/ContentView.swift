@@ -26,14 +26,20 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
-                Text("SwiftMath Testing Suite")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding()
+//                Text("SwiftMath Testing Suite")
+//                    .font(.largeTitle)
+//                    .fontWeight(.bold)
+//                    .padding()
                 
-                NavigationLink(destination: SimpleTestView()) {
-                    TestButtonView(title: "🐛 Debug Test",
-                                 description: "Test SwiftMath integration")
+//                NavigationLink(destination: SimpleTestView()) {
+//                    TestButtonView(title: "🐛 Debug Test",
+//                                 description: "Test SwiftMath integration")
+//                }
+                
+                NavigationLink(destination: EquationListView()) {
+                    TestButtonView(title: "🐛 Equation List",
+                                 description: "Equation List")
+                    //MathView("E=mc^2")
                 }
                 
                 NavigationLink(destination: PerformanceTestView()) {

@@ -324,17 +324,24 @@ struct PerformanceTestView: View {
         }
     }
     
-    // MARK: - Helper Functions
     func measureEquationRenderTime(_ equation: String, fontSize: CGFloat = 20) -> Double {
-        let startTime = CFAbsoluteTimeGetCurrent()
-        
-        let mathLabel = MTMathUILabel()
-        mathLabel.latex = equation
-        mathLabel.fontSize = fontSize
-        mathLabel.sizeToFit()
-        
-        let endTime = CFAbsoluteTimeGetCurrent()
-        return (endTime - startTime) * 1000 // Convert to milliseconds
+        var renderTime: Double = 0
+        let semaphore = DispatchSemaphore(value: 0)
+        DispatchQueue.main.sync {
+            let startTime = CFAbsoluteTimeGetCurrent()
+            
+            let mathLabel = MTMathUILabel()
+            mathLabel.latex = equation
+            mathLabel.fontSize = fontSize
+            mathLabel.sizeToFit()
+//            _ = MathView(equation: equation, fontSize: fontSize)
+            
+            let endTime = CFAbsoluteTimeGetCurrent()
+            renderTime = (endTime - startTime) * 1000 // Convert to milliseconds
+            semaphore.signal()
+        }
+        semaphore.wait()
+        return renderTime
     }
     
     func copyResultsToConsole() {
